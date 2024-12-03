@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Family</title>
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgial, Serif;
+            background: linear-gradient(to right, #3a007d, #12005e);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+            background: linear-gradient(to right, #3a007d, #12005e);
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #00b7ff;
+        }
+
+        section {
+            margin: 2rem auto;
+            max-width: 800px;
+            padding: 1rem;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #fff;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        #family img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 10px 0;
+        }
+
+        #family .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        #family .gallery img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+        }
+
+               @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            #family .gallery img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> ✩‧₊ MY PERSONAL WEBSITE ✩‧₊</h1>
+        <marquee><p><b> ✧˖° LET'S KNOW MORE ABOUT MY FAMILY ✧˖°<b></p></marquee>
+        <nav>
+            <ul>
+		<li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT ME</a></li>
+                <li><a href="family.html">FAMILY</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="experience.html">EXPERIENCE</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="family">
+        <h2>My Family</h2>
+        <center><img src="Gallery/fm.jpg" alt="family photo" width="200" height="200"></center>
+	    <p>This is my family photo. I have seven siblings include me. I'm the first child and daughter in my family. My dad work as a grab driver meanwhile my mom is housewife. My other siblings still in kindergarten, secondary school and high school.To me my family is the cornerstone of my life, providing endless love, support, and guidance. We share a strong bond built on mutual respect and understanding. Each member has a unique personality and contributes to our family dynamic in a special way. Whether it's enjoying simple moments together, celebrating milestones, or overcoming challenges, my family always stands united. They have instilled values in me that shape who I am today, teaching me the importance of kindness, resilience, and togetherness.</p>
+
+	    <h2>Family Gallery</h2>
+        <div class="gallery">
+            <img src="Gallery/fm1.jpg" alt="family photo">
+	        <img src="Gallery/fm2.jpg" alt="family photo">
+        </div>
+    </section>
+
+    <footer>
+        <p><b>© 2024 My Personal Website. All Rights Reserved.<b></p>
+    </footer>
+</body>
+</html>

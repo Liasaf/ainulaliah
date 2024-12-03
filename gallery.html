@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY</title>
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, Serif;
+            background: linear-gradient(to right, #3a007d, #12005e);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header, footer {
+            text-align: center;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 1rem;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background: #12005e;
+            padding: 1rem;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        section {
+            margin: 2rem auto;
+            max-width: 1200px;
+            padding: 1rem;
+            background: linear-gradient(to right, #6a11cb, #2575fc);;
+            border-radius: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .thumbnail {
+            height: 120px;
+            width: auto;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>✩‧₊ MY PERSONAL WEBSITE ✩‧₊</h1>
+	<marquee><p><b> ✧˖° AINUL GALLERY ✧˖°</b></p></marquee>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT ME</a></li>
+                <li><a href="family.html">FAMILY</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="experience.html">EXPERIENCE</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p>Images and video as memories in gallery:</p>
+
+        <h2>Friends (Images)</h2>
+        <div class="gallery">
+            <img class="thumbnail" src="Gallery/f1.jpg" alt="Friends 1" onclick="openModal('Gallery/f1.jpg')">
+            <img class="thumbnail" src="Gallery/f2.jpg" alt="Friends 2" onclick="openModal('Gallery/f2.jpg')">
+            <img class="thumbnail" src="Gallery/f3.jpg" alt="Friends 3" onclick="openModal('Gallery/f3.jpg')">
+            <img class="thumbnail" src="Gallery/f4.jpg" alt="Friends 4" onclick="openModal('Gallery/f4.jpg')">
+            <img class="thumbnail" src="Gallery/f5.jpg" alt="Friends 5" onclick="openModal('Gallery/f5.jpg')">
+            <img class="thumbnail" src="Gallery/f7.jpg" alt="Friends 7" onclick="openModal('Gallery/f7.jpg')">
+            <img class="thumbnail" src="Gallery/f9.jpg" alt="Friends 9" onclick="openModal('Gallery/f9.jpg')">
+            <img class="thumbnail" src="Gallery/f10.jpg" alt="Friends 10" onclick="openModal('Gallery/f10.jpg')">
+        </div>
+
+        <h2>Friends (Videos)</h2>
+        <div class="gallery">
+            <img class="thumbnail" src="Gallery/fv4-thumbnail.jpg" alt="Video 3" onclick="openModal('Gallery/fv4.mp4')">
+            <img class="thumbnail" src="Gallery/fv5-thumbnail.jpg" alt="Video 4" onclick="openModal('Gallery/fv5.mp4')">
+        </div>
+    </section>
+
+    <footer>
+        <p><b>© 2024 My Personal Website. All Rights Reserved.<b></p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img id="modal-content" class="modal-content">
+        <video id="modal-video" class="modal-content" controls style="display: none;"></video>
+    </div>
+
+    <script>
+        function openModal(contentSrc) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-content');
+            const modalVideo = document.getElementById('modal-video');
+
+            modal.style.display = 'flex';
+
+            if (contentSrc.endsWith('.mp4')) {
+                modalVideo.style.display = 'block';
+                modalImg.style.display = 'none';
+                modalVideo.src = contentSrc;
+            } else {
+                modalImg.style.display = 'block';
+                modalVideo.style.display = 'none';
+                modalImg.src = contentSrc;
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-content');
+            const modalVideo = document.getElementById('modal-video');
+
+            modal.style.display = 'none';
+            modalImg.src = '';
+            modalVideo.src = '';
+        }
+    </script>
+</body>
+</html>

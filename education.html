@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Timeline</title>
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        body {
+            font-family: Georgia, Serif;
+            background: linear-gradient(to right, #3a007d, #12005e);
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+            color: #f3f4f6;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+            background: linear-gradient(to right, #3a007d, #12005e);
+            border-radius: 8px;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #f3f4f6;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00b4d8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #f3f4f6;
+            margin-top: 20px;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px auto;
+            padding: 10px 0;
+            width: 90%;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #00b4d8;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .timeline-item.left {
+            justify-content: flex-start;
+        }
+
+        .timeline-item.right {
+            justify-content: flex-end;
+        }
+
+        .timeline-content {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border: 1px solid #30475e;
+            border-radius: 8px;
+            padding: 20px;
+            width: 40%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .timeline-content h3 {
+            margin: 0;
+            color: #fff;
+        }
+
+        .timeline-content p {
+            color: #fff;
+            margin: 5px 0 0;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #00b4d8;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            top: 20px;
+            left: calc(50% - 5px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #f3f4f6;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #00b4d8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> ✩‧₊ MY PERSONAL WEBSITE ✩‧₊</h1>
+        <marquee><p><b> ✧˖° EDUCATIONAL TIMELINE ✧˖°</b></p></marquee>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT ME</a></li>
+                <li><a href="family.html">FAMILY</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="experience.html">EXPERIENCE</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Educational Timeline</h1>
+    <div class="timeline">
+        <div class="timeline-item left">
+            <div class="timeline-content">
+                <h3>SK Bukit Sentosa</h3>
+                <p>2011 - 2016</p>
+                <p>UPSR: 1A, 2B, 2C, 1D</p>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="timeline-content">
+                <h3>SRA Bukit Sentosa Fasa 3</h3>
+                <p>2011 - 2016</p>
+                <p>UPKK: 4A, 4B</p>
+                <p>PSRA: 2A, 3B, 3C</p>
+            </div>
+        </div>
+        <div class="timeline-item left">
+            <div class="timeline-content">
+                <h3>SMK Bukit Sentosa 2</h3>
+                <p>2017 - 2022</p>
+                <p>PT3: 2A, 2B, 4C</p>
+                <p>SPM: 3A, 4B, 2C,</p>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="timeline-content">
+                <h3>UiTM Kampus Segamat, Cawangan Johor</h3>
+                <p>Diploma in Information Management</p>
+                <p>2022 - until now</p>
+                <p>Sem 1: GPA 3.20, CGPA 3.20</p>
+                <p>Sem 2: GPA 3.25, CGPA 3.30</p>
+                <p>Sem 3: GPA 3.30, CGPA 3.35</p>
+                <p>Sem 4: GPA 3.40, CGPA 3.45</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><b>&copy; 2024 My Personal Website. All Rights Reserved.<b></p>
+    </footer>
+</body>
+</html>
