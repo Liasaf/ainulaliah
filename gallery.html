@@ -52,28 +52,31 @@
             margin: 2rem auto;
             max-width: 1200px;
             padding: 1rem;
-            background: linear-gradient(to right, #6a11cb, #2575fc);;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
             border-radius: 10px;
         }
 
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
+        .gallery, .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 1rem;
             justify-content: center;
+            align-items: center;
         }
 
         .thumbnail {
-            height: 120px;
-            width: auto;
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .thumbnail:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
         }
 
         .modal {
@@ -99,7 +102,7 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            font-size: 1.5rem;
+            font-size: 2rem;
             color: #fff;
             cursor: pointer;
         }
@@ -108,7 +111,7 @@
 <body>
     <header>
         <h1>✩‧₊ MY PERSONAL WEBSITE ✩‧₊</h1>
-	<marquee><p><b> ✧˖° AINUL GALLERY ✧˖°</b></p></marquee>
+        <marquee><p><b> ✧˖° AINUL GALLERY ✧˖°</b></p></marquee>
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
@@ -123,25 +126,94 @@
 
     <section id="gallery">
         <h2>Gallery</h2>
-        <p>Images and video as memories in gallery:</p>
+        <p>Images and videos as memories in gallery:</p>
 
-        <h2>Friends (Images)</h2>
-        <div class="gallery">
-            <img class="thumbnail" src="Gallery/f1.jpg" alt="Friends 1" onclick="openModal('Gallery/f1.jpg')">
-            <img class="thumbnail" src="Gallery/f2.jpg" alt="Friends 2" onclick="openModal('Gallery/f2.jpg')">
-            <img class="thumbnail" src="Gallery/f3.jpg" alt="Friends 3" onclick="openModal('Gallery/f3.jpg')">
-            <img class="thumbnail" src="Gallery/f4.jpg" alt="Friends 4" onclick="openModal('Gallery/f4.jpg')">
-            <img class="thumbnail" src="Gallery/f5.jpg" alt="Friends 5" onclick="openModal('Gallery/f5.jpg')">
-            <img class="thumbnail" src="Gallery/f7.jpg" alt="Friends 7" onclick="openModal('Gallery/f7.jpg')">
-            <img class="thumbnail" src="Gallery/f9.jpg" alt="Friends 9" onclick="openModal('Gallery/f9.jpg')">
-            <img class="thumbnail" src="Gallery/f10.jpg" alt="Friends 10" onclick="openModal('Gallery/f10.jpg')">
-        </div>
+            <h1>Photo</h1>
 
-        <h2>Friends (Videos)</h2>
-        <div class="gallery">
-            <img class="thumbnail" src="Gallery/fv4-thumbnail.jpg" alt="Video 3" onclick="openModal('Gallery/fv4.mp4')">
-            <img class="thumbnail" src="Gallery/fv5-thumbnail.jpg" alt="Video 4" onclick="openModal('Gallery/fv5.mp4')">
-        </div>
+        <main class="gallery-container">
+ <a href="#img1" class="gallery-item">
+            <img src="Gallery/f1.jpg" alt="friends">
+        </a>       
+ <a href="#img2" class="gallery-item">
+            <img src="Gallery/f2.jpg" alt="friends">
+	</a>
+
+<a href="#img3" class="gallery-item">
+            <img src="Gallery/f3.jpg" alt="friends">
+        </a>
+        
+<a href="#img4" class="gallery-item">
+            <img src="Gallery/f4.jpg" alt="friends">
+        </a>
+
+ <a href="#img5" class="gallery-item">
+            <img src="Gallery/f5.jpg" alt="friends">
+        </a>
+        
+<a href="#img6" class="gallery-item">
+            <img src="Gallery/f7.jpg" alt="friends">
+        </a>
+<a href="#img7" class="gallery-item">
+            <img src="Gallery/f9.jpg" alt="friends">
+        </a>
+<a href="#img7" class="gallery-item">
+            <img src="Gallery/f10.jpg" alt="friends">
+        </a>
+    </main>
+
+   
+    <div id="img1" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="Gallery/f1.jpg" alt="friends">
+    </div>
+    <div id="img2" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="Gallery/f2.jpg" alt="friends">
+    </div>
+    <div id="img3" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="Gallery/f3.jpg" alt=" friends">
+    </div>
+    <div id="img4" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="Gallery/f4.jpg" alt="friends">
+    </div>
+    <div id="img5" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="Gallery/f5.jpg" alt="friends">
+    </div>
+    <div id="img6" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="Gallery/f7.jpg" alt="friends">
+   </div>
+
+<div id="img7" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="Gallery/f9.jpg" alt="friends">
+    </div>
+
+<div id="img7" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="Gallery/f10.jpg" alt="friends">
+    </div>
+</div>
+
+<hr size= "9" width="100%" color="white" align="center">
+
+
+ <div class="Video">
+        <h2>Here's some videos of me and my friends</h2>
+       <video width="400" controls>
+  	<source src="Gallery/fv5.mp4" type="video/mp4">
+  	<source src="friends.ogg" type="video/ogg">
+  	Your browser does not support HTML video.
+	</video>
+        <video width="400" controls>
+  	<source src="Gallery/fv4.mp4" type="video/mp4">
+  	<source src="friends.ogg" type="video/ogg">
+  	Your browser does not support HTML video.
+	</video>
+ 	
     </section>
 
     <footer>
@@ -186,3 +258,4 @@
     </script>
 </body>
 </html>
+
