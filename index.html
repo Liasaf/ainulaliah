@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PERSONAL WEBSITE</title>
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, Serif;
+            background: url('Gallery/view.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        marquee {
+            margin: 1rem 0;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+            background: linear-gradient(to right, #3a007d, #12005e);
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #00b7ff;
+        }
+
+        section {
+            margin: 2rem auto;
+            max-width: 800px;
+            padding: 1rem;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #fff;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        #home img {
+            max-width: 100%;
+            display: block;
+            margin: 1rem auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .column {
+            flex: 1 1 30%;
+            margin: 1rem;
+        }
+
+        .card {
+            padding: 1rem;
+            background: linear-gradient(to right, #3a007d, #12005e);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .card button {
+            background-color: #00b7ff;
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+
+        .card button:hover {
+            background-color: #007bb5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            .row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .column {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="color:#a1045a;"><i> ✩‧₊ MY PERSONAL WEBSITE ✩‧₊</i></h1>
+        <marquee><p style="color:#a1054a;"><b>WELCOME TO MY WEBSITE!!</b></p></marquee>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#about.html">ABOUT ME</a></li>
+                <li><a href="#family.html">FAMILY</a></li>
+                <li><a href="#education.html">EDUCATION</a></li>
+                <li><a href="#experience.html">EXPERIENCE</a></li>
+                <li><a href="#gallery.html">GALLERY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>My Personal Website</h2>
+        <center><p>Welcome to my website. With this website, you can learn more about me with press the button below:</p></center>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <h2  id="about.html">About Me</h2>
+                    <p>My name is 'Ainul 'Aliah </p>
+                    <a href="about.html"><button>See More</button></a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h2 id="family.html">Family</h2>
+                    <p>This is my family </p>
+                    <a href="family.html"><button>See More</button></a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h2  id="education.html">Education</h2>
+                    <p>This page is about my education </p>
+                    <a href="education.html"><button>See More</button></a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h2  id="experience.html">Experience</h2>
+                    <p>This page is about my work experience </p>
+                    <a href="experience.html"><button>See More</button></a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h2  id="gallery.html">Gallery</h2>
+                    <p>My gallery </p>
+                    <a href="gallery.html"><button>See More</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><b>© 2024 My Personal Website. All rights reserved.<b></p>
+    </footer>
+</body>
+</html>
