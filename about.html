@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT ME</title>
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, Serif;
+            background: linear-gradient(to right, #3a007d, #12005e);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+            background: linear-gradient(to right, #3a007d, #12005e);
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #00b7ff;
+        }
+
+        section {
+            margin: 2rem auto;
+            max-width: 800px;
+            padding: 1.5rem;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+
+        section h2 {
+            color: #fff;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+       
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color:#a1054a;"><i> ✩‧₊ MY PERSONAL WEBSITE ✩‧₊</i></h1>
+        <marquee><p style="color:#a1054a;"><b> ✧˖° MY BIODATA ✧˖°<b></p></marquee>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT ME</a></li>
+                <li><a href="family.html">FAMILY</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="experience.html">EXPERIENCE</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <center><img src="Gallery/me1.jpg" alt="myself" border="3" width="150" height="250"></center>
+        <p>NAME: 'AINUL 'ALIAH BINTI MOHD SAFRI</p>
+        <p>DATE OF BIRTH: 03/09/2004</p>
+        <p>PLACE OF BIRTH: HOSPITAL TAWAKKAL KUALA LUMPUR</p>  
+        <p>ADDRESS: NO12A, JALAN WIDURI 2G, TAMAN WIDURI 2, 48300, BUKIT BERUNTUNG, RAWANG, SELANGOR</p>
+        <p>PHONE: 019-8305416</p>
+        <p>EMAIL: <a href="mailto:ainulaliah09@gmail.com" style="color: #00b7ff;">ainulaliah09@gmail.com</a></p>
+
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Reading novels</li>
+            <li>Watch k-drama</li>
+            <li>Listening to songs</li>
+        </ul>
+
+        <h2>My Favourite</h2>
+        <p>My <sup>Favourite</sup> <b>Food</b>:</p>
+        <ol type="a">
+            <li>Fish and chips</li>
+            <li>Garlic bread</li>
+        </ol>
+
+        <p>My <sub>Favourite</sub> <b>Drink</b>:</p>
+        <ol type="a">
+            <li>Orange juice</li>
+            <li>Mango smoothies</li>
+        </ol>
+
+        <p>My Favourite <b>Songs</b>:</p>
+        <ul>
+            <li>Luka-Tya Edros</li>
+        </ul>
+        <audio controls>
+            <source src="Gallery/luka.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <ul>
+            <li>Wildflower-Billie Eilish</li>
+        </ul>
+        <audio controls>
+            <source src="Gallery/wildflower.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <footer>
+        <p><b>© 2024 My Personal Website. All Rights Reserved.<b></p>
+    </footer>
+</body>
+</html>

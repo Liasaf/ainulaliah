@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY</title>
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, Serif;
+            background: linear-gradient(to right, #3a007d, #12005e);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header, footer {
+            text-align: center;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 1rem;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background: #12005e;
+            padding: 1rem;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        section {
+            margin: 2rem auto;
+            max-width: 1200px;
+            padding: 1rem;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border-radius: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            justify-items: center;
+        }
+
+        .thumbnail {
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color:#a1054a;"><i>✩‧₊ MY PERSONAL WEBSITE ✩‧₊</i></h1>
+        <marquee><p style="color:#a1054a;"><b> ✧˖° AINUL GALLERY ✧˖°</b></p></marquee>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT ME</a></li>
+                <li><a href="family.html">FAMILY</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="experience.html">EXPERIENCE</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p>Images and videos as memories in gallery:</p>
+
+        <h1>Photos</h1>
+        <div class="gallery">
+            <img id="img1-thumbnail" class="thumbnail" src="Gallery/f1.jpg" alt="friends 1" onclick="openModal('Gallery/f1.jpg')">
+            <img id="img2-thumbnail" class="thumbnail" src="Gallery/f2.jpg" alt="friends 2" onclick="openModal('Gallery/f2.jpg')">
+            <img id="img3-thumbnail" class="thumbnail" src="Gallery/f3.jpg" alt="friends 3" onclick="openModal('Gallery/f3.jpg')">
+            <img id="img4-thumbnail" class="thumbnail" src="Gallery/f4.jpg" alt="friends 4" onclick="openModal('Gallery/f4.jpg')">
+            <img id="img5-thumbnail" class="thumbnail" src="Gallery/f5.jpg" alt="friends 5" onclick="openModal('Gallery/f5.jpg')">
+            <img id="img6-thumbnail" class="thumbnail" src="Gallery/f7.jpg" alt="friends 6" onclick="openModal('Gallery/f7.jpg')">
+            <img id="img7-thumbnail" class="thumbnail" src="Gallery/f9.jpg" alt="friends 7" onclick="openModal('Gallery/f9.jpg')">
+            <img id="img8-thumbnail" class="thumbnail" src="Gallery/f10.jpg" alt="friends 8" onclick="openModal('Gallery/f10.jpg')">
+        </div>
+
+        <h1>Videos</h1>
+        <div class="video-container">
+            <video width="400" controls>
+                <source src="Gallery/fv5.mp4" type="video/mp4">
+                <source src="friends.ogg" type="video/ogg">
+                Your browser does not support HTML video.
+            </video>
+            <video width="400" controls>
+                <source src="Gallery/fv4.mp4" type="video/mp4">
+                <source src="friends.ogg" type="video/ogg">
+                Your browser does not support HTML video.
+            </video>
+        </div>
+    </section>
+
+    <footer>
+        <p><b>© 2024 My Personal Website. All Rights Reserved.<b></p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" src="" alt="">
+    </div>
+
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-img');
+            modal.style.display = 'flex';
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+            document.getElementById('modal-img').src = '';
+        }
+    </script>
+</body>
+</html>
